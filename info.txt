@@ -1,0 +1,22 @@
+news-aggregator/
+├── server/                # Backend (Node/Express)
+│   ├── config/            # Database connection, API keys
+│   ├── controllers/       # Logic for each route (The "Brain")
+│   ├── models/            # Mongoose Schemas (The "Data Shape")
+│   ├── routes/            # Definition of API endpoints
+│   ├── middlewares/       # Auth checks, error handling
+│   ├── services/          # External API fetching (NewsAPI logic)
+│   ├── utils/             # Helper functions (Cron jobs, date formatting)
+│   ├── .env               # Secret variables (don't push to GitHub!)
+│   ├── server.mjs         # Entry point
+│   └── package.json
+├── client/                # Frontend (HTML/CSS/JS or React)
+│   ├── public/            # Static assets (images, icons)
+│   ├── src/               
+│   │   ├── components/    # Reusable UI parts (Navbar, NewsCard)
+│   │   ├── pages/         # Home, Profile, Bookmarks
+│   │   ├── assets/        # Stylesheets (CSS) and images
+│   │   └── app.mjs        # Main frontend logic
+│   └── index.html
+├── .gitignore             # Tells Git what to ignore (node_modules, .env)
+└── README.md              # Project documentation
