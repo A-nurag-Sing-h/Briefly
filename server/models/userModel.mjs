@@ -24,11 +24,12 @@ const userSchema = new mongoose.Schema({
         minlength:6,
         select:false
     },
-    interestCategories: 
-    { 
-        type: [String],
-        default: []
-    },
+    interestCategories: [
+        {
+            category: { type: String, required: true },
+            points: { type: Number, default: 10 }
+        }
+    ],
     bookmarks: [
         {
             title: String,

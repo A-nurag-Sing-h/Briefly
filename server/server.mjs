@@ -9,6 +9,7 @@ import connectDB from "./config/db.mjs";
 import userRoutes from "./routes/userRoutes.mjs";
 import newsRoutes from "./routes/newsRoutes.mjs";
 import bookmarkRoutes from "./routes/bookmarkRoutes.mjs";
+import { errorHandler } from "./middlewares/errorMiddleware.mjs";
 
 // __filename and __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -27,9 +28,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
+
 app.use("/api/users",userRoutes);
 app.use("/api/news",newsRoutes);
 app.use("/api/bookmark",bookmarkRoutes);
+
+app.use(errorHandler);
 
 // basic route 
 app.get("/",(req,res)=>{
