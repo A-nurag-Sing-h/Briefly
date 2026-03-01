@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Briefly</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Briefly</div>
+        <div class="user-info">
+            <a href="bookmarks.html" class="lib-link" style="color: white; margin-right: 15px; text-decoration: none; font-weight: 500;">
+                My Library 📚
+            </a>
+            <span id="welcomeName"></span>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="controls">
+            <input type="text" id="searchInput" placeholder="Search exam topics (e.g. UPSC, ISRO)...">
+            <button id="searchBtn">Search</button>
+        </section>
+
+        <div id="newsFeed" class="news-grid">
+            <p class="loading">Fetching your personalized feed...</p>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.post("/bookmarks", protect, addBookmark);
 router.get("/bookmarks",protect,showBookmarks);
-router.delete("/bookmarks/:id",deleteBookmark);
+router.delete("/bookmarks/:id",protect,deleteBookmark);
 
 export default router; 
