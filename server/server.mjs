@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 // Load environment variables
 dotenv.config({path: path.join(__dirname,".env")});
 
-// database connection 
+// database connection  
 connectDB();
 
 // Initialize the express 
